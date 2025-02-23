@@ -1,0 +1,190 @@
+/* src/App.css */
+.app-container {
+  min-height: 100vh;
+  background: #1a2536; /* Dark blue background as per image */
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  overflow: hidden;
+}
+
+.form-container {
+  background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+  backdrop-filter: blur(10px); /* Glassmorphism blur */
+  padding: 30px;
+  border-radius: 20px; /* Rounded corners as per image */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Glassmorphism border */
+  z-index: 10;
+}
+
+.title {
+  color: #a2cffe; /* Light blue as per image */
+  text-align: center;
+  margin-bottom: 0;
+  font-family: 'Arial', sans-serif;
+  font-size: 2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+  color: #a2cffe;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.platform-selection {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.platform-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.platform-btn.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #a2cffe;
+}
+
+.platform-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #a2cffe;
+}
+
+.input-group {
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-label {
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.name-input {
+  width: 95%; /* Reduced width to prevent overflow */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px; /* Larger rounded corners */
+  font-size: 1rem;
+  background: #ffffff; /* White background for input */
+  color: #000000; /* Black text for input */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-family: 'Arial', sans-serif;
+  margin: 0 auto; /* Centers the input horizontally within the form */
+}
+
+.name-input:focus {
+  outline: none;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 5px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.name-input::placeholder {
+  color: #666666; /* Light gray placeholder text */
+}
+
+.download-btn {
+  width: 95%; /* Reduced width to match input width */
+  padding: 12px;
+  background: #FF6347; /* Red background as per image */
+  border: none;
+  border-radius: 30px; /* Larger rounded corners */
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 99, 71, 0.4);
+  margin: 0 auto; /* Centers the button horizontally within the form */
+}
+
+.download-btn:hover:not(:disabled) {
+  background: #FF7F50; /* Slightly lighter red on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 99, 71, 0.5);
+}
+
+.download-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.choose-text {
+  color: #a2cffe;
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+
+.certificate-wrapper {
+  perspective: 1000px;
+  z-index: 5; /* Ensures certificate is below form if overlapping */
+  display: none; /* Hidden from UI, only for download */
+}
+
+.certificate {
+  position: relative;
+  width: 800px; /* Adjust to your template's exact width */
+  height: 600px; /* Adjust to your template's exact height */
+  transform: rotateX(5deg) rotateY(5deg);
+  transition: transform 0.3s ease;
+}
+
+.certificate:hover {
+  transform: rotateX(0deg) rotateY(0deg);
+}
+
+.certificate-template {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 215px; /* Set to 215px as requested */
+}
+
+.cert-name {
+  color: #000000; /* Black color as previously requested */
+  font-size: 48px; /* Keep the size, but can be adjusted if needed */
+  font-family: 'Times New Roman', Times, serif; /* Using Times New Roman as requested */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 0 20px;
+}
